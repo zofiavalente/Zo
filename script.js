@@ -3,9 +3,9 @@
 const NOME_DELE = "Mamufo";
 // Legendas por baixo de cada foto (foto1, foto2, …). Podes alterar à vontade.
 const LEGENDAS = [
-  "a espreitar a ver se já me perdoaste 🌿",
-  "este olhar é por mim 🥺",
-  "a vir dar-te um beijinho de perto 😽",
+  "a Pipoca a espreitar a ver se já me perdoaste 🌿",
+  "este olhar da Pipoca é por mim 🥺",
+  "a Pipoca a vir dar-te um beijinho de perto 😽",
   "💕", "😻", "🥰", "🐱", "💖", "💞", "🐾"
 ];
 // Quantas fotos procurar na pasta fotos/ (foto1 … fotoN)
@@ -54,7 +54,7 @@ function carregarFoto(n, i = 0) {
   let total = 0;
   resultados.forEach((img, k) => {
     if (!img) return;
-    img.alt = "Gato a pedir desculpa por mim";
+    img.alt = "A Pipoca a pedir desculpa por mim";
     img.loading = "lazy";
     const cartao = document.createElement("figure");
     cartao.className = "polaroid";
@@ -72,7 +72,7 @@ function carregarFoto(n, i = 0) {
 const nao = document.getElementById("nao");
 const sim = document.getElementById("sim");
 const resposta = document.getElementById("resposta");
-const FRASES_NAO = ["Não 😿", "Tens a certeza? 🥺", "Pensa melhor… 🙀", "Olha que os gatos ficam tristes 😿",
+const FRASES_NAO = ["Não 😿", "Tens a certeza? 🥺", "Pensa melhor… 🙀", "Olha que a Pipoca fica triste 😿",
                     "Vá lá… 😾", "Por favorzinho 🥹"];
 let tentativas = 0;
 
@@ -91,7 +91,7 @@ nao.addEventListener("touchstart", e => { e.preventDefault(); fugir(); }, { pass
 sim.addEventListener("click", () => {
   nao.hidden = true;
   resposta.hidden = false;
-  resposta.textContent = "Obrigada, Mamufo! 💖 Gosto tanto de ti. Os gatos já estão a festejar! 😻🎉";
+  resposta.textContent = "Obrigada, Mamufo! 💖 Gosto tanto de ti. A Pipoca já está a festejar! 😻🎉";
   for (let k = 0; k < 120; k++) {
     setTimeout(() => criarGota(null, Math.random() * 100), k * 25);
   }
