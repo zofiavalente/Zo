@@ -87,3 +87,8 @@ footer{position:relative;z-index:1;text-align:center;padding:2rem;font-weight:60
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
 }
+
+/* ---------- foto de destaque ---------- */
+.destaque{max-width:520px;padding-bottom:72px;margin:2rem auto 0;transform:rotate(-2deg)}
+.destaque img{aspect-ratio:3/4;object-position:50% 70%}
+.destaque .legenda{font-size:1.05rem}
