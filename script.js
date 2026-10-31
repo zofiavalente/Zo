@@ -1,8 +1,13 @@
 // ====== PERSONALIZA AQUI ======
 // Escreve o nome (ou alcunha) do teu namorado entre as aspas:
-const NOME_DELE = "meu amor";
+const NOME_DELE = "Mamufo";
 // Legendas por baixo de cada foto (foto1, foto2, …). Podes alterar à vontade.
-const LEGENDAS = ["💕", "😻", "🥰", "🐱", "💖", "😽", "💞", "🐾", "💗", "😸", "💘", "🫶"];
+const LEGENDAS = [
+  "a espreitar a ver se já me perdoaste 🌿",
+  "este olhar é por mim 🥺",
+  "a vir dar-te um beijinho de perto 😽",
+  "💕", "😻", "🥰", "🐱", "💖", "💞", "🐾"
+];
 // Quantas fotos procurar na pasta fotos/ (foto1 … fotoN)
 const MAX_FOTOS = 30;
 // ===============================
@@ -49,7 +54,7 @@ function carregarFoto(n, i = 0) {
   let total = 0;
   resultados.forEach((img, k) => {
     if (!img) return;
-    img.alt = "Nós os dois 💕";
+    img.alt = "Gato a pedir desculpa por mim";
     img.loading = "lazy";
     const cartao = document.createElement("figure");
     cartao.className = "polaroid";
@@ -67,8 +72,8 @@ function carregarFoto(n, i = 0) {
 const nao = document.getElementById("nao");
 const sim = document.getElementById("sim");
 const resposta = document.getElementById("resposta");
-const FRASES_NAO = ["Não 😿", "Tens a certeza? 🥺", "Pensa bem… 🙀", "Os gatos estão tristes 😿",
-                    "Última oportunidade! 😾", "Por favorzinho 🥹"];
+const FRASES_NAO = ["Não 😿", "Tens a certeza? 🥺", "Pensa melhor… 🙀", "Olha que os gatos ficam tristes 😿",
+                    "Vá lá… 😾", "Por favorzinho 🥹"];
 let tentativas = 0;
 
 function fugir() {
@@ -86,7 +91,7 @@ nao.addEventListener("touchstart", e => { e.preventDefault(); fugir(); }, { pass
 sim.addEventListener("click", () => {
   nao.hidden = true;
   resposta.hidden = false;
-  resposta.textContent = "YAAAY!! 💖 Amo-te bué! Os gatinhos estão a fazer a festa! 😻🎉";
+  resposta.textContent = "Obrigada, Mamufo! 💖 Gosto tanto de ti. Os gatos já estão a festejar! 😻🎉";
   for (let k = 0; k < 120; k++) {
     setTimeout(() => criarGota(null, Math.random() * 100), k * 25);
   }
