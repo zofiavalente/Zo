@@ -8,7 +8,6 @@ const LEGENDAS = [
   "a Pipoca a vir dar-te um beijinho de perto 😽",
   "os meus dois preferidos 😻",
   "eu, à espera de um «sim» teu 🌼",
-  "a Pipoca a receber miminhos 🐾",
   "💕", "😻", "🥰", "🐱", "💖", "💞", "🐾"
 ];
 // Quantas fotos procurar na pasta fotos/ (foto1 … fotoN)
